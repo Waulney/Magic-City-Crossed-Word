@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Magic City Fun Park - Présidents & Élections</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-magic">
+
+    <div class="magic-game-wrapper">
+        <!-- En-tête officiel Magic City Fun Park -->
+        <header class="magic-header">
+            <div class="brand-box">
+                <span class="brand-icon">🎢</span>
+                <div class="brand-titles">
+                    <h1>MAGIC CITY</h1>
+                    <p>FUN PARK • PRÉSIDENTS & ÉLECTIONS</p>
+                </div>
+            </div>
+
+            <div class="header-controls">
+                <select id="langSelect" class="magic-select">
+                    <option value="fr" selected>🇫🇷 FR</option>
+                    <option value="en">🇺🇸 EN</option>
+                </select>
+                <button id="themeToggleBtn" class="magic-icon-btn" title="Changer le thème">☀️</button>
+            </div>
+        </header>
+
+        <!-- Barre de statut, Niveaux (1 à 20) et Chronomètre -->
+        <div class="magic-status-bar">
+            <span id="levelDisplay" class="pill-badge">Niveau 1 / 20</span>
+            <span id="timerDisplay" class="pill-badge timer-pill">⏱️ 00:00</span>
+            <span id="scoreDisplay" class="pill-badge score-pill">Trouvés : 0/5</span>
+        </div>
+
+        <!-- Zone principale du jeu -->
+        <main class="game-main-card">
+            <div class="level-info">
+                <h2 id="levelThemeTitle">Thème : Les Prénoms Fondateurs</h2>
+                <p id="gameInstruction" class="game-instruction">Consigne : Glisse ton doigt ou ta souris de manière fluide pour relier les mots en ligne droite.</p>
+            </div>
+
+            <!-- Grille de jeu interactive (10x10) -->
+            <div id="gridContainer" class="word-grid"></div>
+
+            <!-- Liste des mots à chercher pour le niveau -->
+            <div class="words-to-find-container">
+                <h3 id="wordsToFindTitle">Mots à chercher :</h3>
+                <div id="wordList" class="word-chips"></div>
+            </div>
+        </main>
+
+        <!-- Modale de fin de niveau avec affichage du temps -->
+        <div id="levelModal" class="modal-backdrop hidden">
+            <div class="modal-box">
+                <div class="modal-emoji">🎉</div>
+                <h2 id="modalTitle">Niveau Terminé !</h2>
+                <p id="modalTimeResult">Temps écoulé : 00:45</p>
+                <p id="modalDesc">Prêt pour le niveau suivant ?</p>
+                <button id="nextLevelBtn" class="magic-btn-primary">Niveau Suivant</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
